@@ -1,0 +1,97 @@
+:root {
+  /* Core brand colors */
+  --fluxi-orange: #ff7a1a;
+  --fluxi-orange-hover: #e86800;
+  --fluxi-blue: #2316b8;
+  --fluxi-blue-hover: #1a1194;
+  --fluxi-black: #1a1a1a;
+  --fluxi-white: #ffffff;
+  --fluxi-gray-50: #f6f8fb;
+  --fluxi-green-accent: #cdefd7;
+
+  /* Semantic states */
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --info: #3b82f6;
+
+  /* Layout and surface */
+  --radius-card: 14px;
+  --shadow-soft: 0 8px 24px rgba(35, 22, 184, 0.08);
+
+  /* Typography */
+  --font-heading: "Poppins", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  color: var(--fluxi-black);
+  background: var(--fluxi-white);
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: var(--font-heading);
+  color: var(--fluxi-blue);
+}
+
+.card {
+  background: var(--fluxi-white);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-primary {
+  background: var(--fluxi-orange);
+  color: var(--fluxi-white);
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--fluxi-orange-hover);
+}
+
+.btn-secondary {
+  background: var(--fluxi-blue);
+  color: var(--fluxi-white);
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: var(--fluxi-blue-hover);
+}
+
+.surface-muted {
+  background: var(--fluxi-gray-50);
+}
+
+.status-success {
+  color: var(--success);
+}
+
+.status-warning {
+  color: var(--warning);
+}
+
+.status-error {
+  color: var(--error);
+}
+
+.status-info {
+  color: var(--info);
+}
