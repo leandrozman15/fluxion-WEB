@@ -355,9 +355,50 @@ a:focus-visible {
   min-height: 200px;
   border-radius: 12px;
   border: 1px solid var(--surface-border);
-  background:
-    linear-gradient(120deg, rgba(35, 22, 184, 0.15), rgba(35, 22, 184, 0.02)),
-    repeating-linear-gradient(to right, transparent, transparent 30px, rgba(35, 22, 184, 0.06) 31px);
+  background: linear-gradient(160deg, rgba(35, 22, 184, 0.08), rgba(255, 255, 255, 0.92));
+  padding: 0.65rem;
+}
+
+.chart-title {
+  margin: 0 0 0.55rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.chart-bars {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: end;
+  gap: 0.35rem;
+  min-height: 130px;
+}
+
+.bar {
+  position: relative;
+  height: var(--value);
+  min-height: 28px;
+  border-radius: 8px 8px 4px 4px;
+  background: linear-gradient(180deg, rgba(35, 22, 184, 0.9), rgba(50, 71, 216, 0.72));
+}
+
+.bar:nth-child(odd) {
+  background: linear-gradient(180deg, rgba(255, 122, 26, 0.9), rgba(255, 122, 26, 0.68));
+}
+
+.bar span {
+  position: absolute;
+  bottom: -1.15rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.64rem;
+  color: var(--text-muted);
+}
+
+.chart-meta {
+  margin: 1.45rem 0 0;
+  font-size: 0.73rem;
+  color: var(--fluxi-blue);
+  font-weight: 600;
 }
 
 .feed {
@@ -437,6 +478,7 @@ a:focus-visible {
   border-radius: 12px;
   margin-top: 0.75rem;
   border: 1px solid var(--surface-border);
+  padding: 0.75rem;
 }
 
 .screen-dashboard {
@@ -462,6 +504,23 @@ a:focus-visible {
   background:
     linear-gradient(90deg, rgba(35, 22, 184, 0.09) 33%, transparent 33%, transparent 66%, rgba(255, 122, 26, 0.15) 66%),
     rgba(246, 248, 251, 0.95);
+}
+
+.mini-title {
+  margin: 0 0 0.45rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--fluxi-blue);
+}
+
+.mini-list {
+  margin: 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.76rem;
+  line-height: 1.32;
+  color: var(--text-muted);
 }
 
 .benefit-grid {
@@ -503,6 +562,25 @@ a:focus-visible {
 }
 
 .impact-card p:last-child {
+  margin-bottom: 0;
+  color: var(--text-muted);
+}
+
+.detail-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.detail-card {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--surface-border);
+  background: rgba(255, 255, 255, 0.94);
+  padding: 1rem;
+}
+
+.detail-card p {
   margin-bottom: 0;
   color: var(--text-muted);
 }
@@ -598,6 +676,24 @@ a:focus-visible {
   font: inherit;
 }
 
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.faq-card {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--surface-border);
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.97), rgba(246, 248, 251, 0.9));
+  padding: 1rem;
+}
+
+.faq-card p {
+  margin-bottom: 0;
+  color: var(--text-muted);
+}
+
 .site-footer {
   background: #111126;
   color: rgba(255, 255, 255, 0.87);
@@ -690,7 +786,9 @@ a:focus-visible {
 
   .benefit-grid,
   .impact-row,
-  .industry-grid {
+  .industry-grid,
+  .detail-grid,
+  .faq-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -747,7 +845,9 @@ a:focus-visible {
   .benefit-grid,
   .impact-row,
   .industry-grid,
-  .flow-track {
+  .flow-track,
+  .detail-grid,
+  .faq-grid {
     grid-template-columns: 1fr;
   }
 

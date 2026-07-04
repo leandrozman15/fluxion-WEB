@@ -171,7 +171,19 @@
                     </div>
                   </div>
                   <div class="chart-and-feed">
-                    <div class="chart"></div>
+                    <div class="chart" role="img" aria-label="Grafico de eficiencia semanal">
+                      <p class="chart-title">Eficiencia semanal</p>
+                      <div class="chart-bars" aria-hidden="true">
+                        <div class="bar" style="--value: 72%"><span>Seg</span></div>
+                        <div class="bar" style="--value: 78%"><span>Ter</span></div>
+                        <div class="bar" style="--value: 83%"><span>Qua</span></div>
+                        <div class="bar" style="--value: 76%"><span>Qui</span></div>
+                        <div class="bar" style="--value: 88%"><span>Sex</span></div>
+                        <div class="bar" style="--value: 81%"><span>Sab</span></div>
+                        <div class="bar" style="--value: 92%"><span>Dom</span></div>
+                      </div>
+                      <p class="chart-meta">Meta operacional: 95% | Atual: 92%</p>
+                    </div>
                     <div class="feed">
                       <p><b>OP-0321</b> Corte concluido</p>
                       <p><b>SKU-9012</b> Estoque baixo</p>
@@ -201,22 +213,50 @@
             <article class="module-card card reveal">
               <h3>Dashboard executivo</h3>
               <p>Indicadores em tempo real para decisao rapida e segura.</p>
-              <div class="mini-screen screen-dashboard"></div>
+              <div class="mini-screen screen-dashboard">
+                <p class="mini-title">Visao consolidada</p>
+                <ul class="mini-list">
+                  <li>Faturamento diario, semanal e mensal</li>
+                  <li>Ordens atrasadas por setor</li>
+                  <li>Custos de producao por linha</li>
+                </ul>
+              </div>
             </article>
             <article class="module-card card reveal delay-1">
               <h3>Ordens de producao</h3>
               <p>Acompanhe etapas, gargalos e prazos de entrega.</p>
-              <div class="mini-screen screen-production"></div>
+              <div class="mini-screen screen-production">
+                <p class="mini-title">Controle de OP</p>
+                <ul class="mini-list">
+                  <li>Status por etapa e responsavel</li>
+                  <li>Tempo de ciclo por ordem</li>
+                  <li>Alertas de gargalo em tempo real</li>
+                </ul>
+              </div>
             </article>
             <article class="module-card card reveal delay-2">
               <h3>Estoque e compras</h3>
               <p>Reabastecimento inteligente com menos ruptura.</p>
-              <div class="mini-screen screen-stock"></div>
+              <div class="mini-screen screen-stock">
+                <p class="mini-title">Abastecimento continuo</p>
+                <ul class="mini-list">
+                  <li>Estoque minimo e maximo por item</li>
+                  <li>Sugestao automatica de compra</li>
+                  <li>Historico de fornecedores e prazos</li>
+                </ul>
+              </div>
             </article>
             <article class="module-card card reveal">
               <h3>Produtos e clientes</h3>
               <p>Cadastro centralizado para menos retrabalho operacional.</p>
-              <div class="mini-screen screen-catalog"></div>
+              <div class="mini-screen screen-catalog">
+                <p class="mini-title">Base unica de dados</p>
+                <ul class="mini-list">
+                  <li>Ficha tecnica por produto</li>
+                  <li>Historico completo por cliente</li>
+                  <li>Cadastro com regras de validacao</li>
+                </ul>
+              </div>
             </article>
           </div>
         </div>
@@ -250,6 +290,21 @@
             <article class="impact-card">
               <p class="impact-number">-55%</p>
               <p>menos dependencia de planilhas</p>
+            </article>
+          </div>
+
+          <div class="detail-grid reveal">
+            <article class="detail-card">
+              <h3>Implantacao assistida</h3>
+              <p>Parametrizacao inicial, treinamento da equipe e acompanhamento diario na primeira semana.</p>
+            </article>
+            <article class="detail-card">
+              <h3>Rastreabilidade completa</h3>
+              <p>Do cadastro de materia-prima ao pedido entregue, com historico por lote e por ordem.</p>
+            </article>
+            <article class="detail-card">
+              <h3>Analise de desempenho</h3>
+              <p>Relatorios de produtividade, consumo, perdas e lead time para tomada de decisao rapida.</p>
             </article>
           </div>
         </div>
@@ -316,6 +371,34 @@
             <button class="btn btn-primary" type="submit">Solicitar demonstracao</button>
             <a class="btn btn-secondary" href="#top">Teste por 7 dias</a>
           </form>
+        </div>
+      </section>
+
+      <section class="section-padding" aria-labelledby="faq-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Perguntas frequentes</p>
+            <h2 id="faq-title">Duvidas comuns antes da demonstracao</h2>
+          </div>
+
+          <div class="faq-grid">
+            <article class="faq-card reveal">
+              <h3>Quanto tempo leva para comecar?</h3>
+              <p>Em media, de 48 a 72 horas para configurar a base inicial e iniciar operacao assistida.</p>
+            </article>
+            <article class="faq-card reveal delay-1">
+              <h3>Precisa instalar algo na fabrica?</h3>
+              <p>Nao. FluxiON e 100% web, acessivel em desktop, tablet e celular, sem infraestrutura local complexa.</p>
+            </article>
+            <article class="faq-card reveal delay-2">
+              <h3>Minha equipe consegue usar rapido?</h3>
+              <p>Sim. A interface foi desenhada para operacao industrial e inclui onboarding pratico por funcao.</p>
+            </article>
+            <article class="faq-card reveal">
+              <h3>Posso testar antes de contratar?</h3>
+              <p>Sim. Voce pode iniciar com teste orientado para validar processo, indicadores e aderencia do time.</p>
+            </article>
+          </div>
         </div>
       </section>
     </main>
