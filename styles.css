@@ -192,6 +192,12 @@ a:focus-visible {
   box-shadow: 0 12px 20px rgba(35, 22, 184, 0.23);
 }
 
+.btn[disabled] {
+  opacity: 0.7;
+  cursor: wait;
+  transform: none;
+}
+
 .btn-ghost {
   border-color: var(--surface-border);
   color: var(--fluxi-blue);
@@ -676,6 +682,106 @@ a:focus-visible {
   font: inherit;
 }
 
+.demo-form textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 110px;
+  border-radius: 10px;
+  border: 1px solid rgba(35, 22, 184, 0.25);
+  padding: 0.68rem;
+  font: inherit;
+}
+
+.cta-checklist {
+  margin: 1.2rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.cta-checklist li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-weight: 600;
+}
+
+.cta-checklist li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--fluxi-orange);
+}
+
+.form-note {
+  margin: 0.2rem 0 0;
+  font-size: 0.84rem;
+  color: rgba(26, 26, 26, 0.72);
+}
+
+.form-status {
+  min-height: 1.5rem;
+  margin: 0;
+  font-weight: 600;
+  color: var(--fluxi-blue);
+}
+
+.form-status.is-success {
+  color: var(--success);
+}
+
+.form-status.is-error {
+  color: var(--error);
+}
+
+.contact-layout {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.contact-card {
+  padding: 1.1rem;
+  border: 1px solid var(--surface-border);
+}
+
+.contact-label {
+  margin: 0 0 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fluxi-blue);
+}
+
+.contact-link {
+  display: inline-block;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--fluxi-black);
+}
+
+.contact-link.strong,
+.contact-strong {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--fluxi-blue);
+}
+
+.contact-copy {
+  margin-bottom: 0;
+  color: var(--text-muted);
+}
+
+.contact-btn {
+  margin-top: 1rem;
+}
+
 .faq-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -737,17 +843,30 @@ a:focus-visible {
   font-size: 0.88rem;
 }
 
-.floating-cta {
+.floating-whatsapp {
   position: fixed;
   right: 1rem;
   bottom: 1rem;
   z-index: 50;
-  background: var(--fluxi-orange);
+  background: #12b76a;
   color: var(--fluxi-white);
   border-radius: 999px;
   padding: 0.85rem 1rem;
   font-weight: 700;
-  box-shadow: 0 12px 20px rgba(255, 122, 26, 0.33);
+  box-shadow: 0 12px 20px rgba(18, 183, 106, 0.35);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.floating-whatsapp-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.18);
+  font-weight: 800;
 }
 
 .reveal {
@@ -788,7 +907,8 @@ a:focus-visible {
   .impact-row,
   .industry-grid,
   .detail-grid,
-  .faq-grid {
+  .faq-grid,
+  .contact-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -847,14 +967,16 @@ a:focus-visible {
   .industry-grid,
   .flow-track,
   .detail-grid,
-  .faq-grid {
+  .faq-grid,
+  .contact-grid {
     grid-template-columns: 1fr;
   }
 
-  .floating-cta {
+  .floating-whatsapp {
     left: 0.75rem;
     right: 0.75rem;
     text-align: center;
+    justify-content: center;
   }
 }
 
