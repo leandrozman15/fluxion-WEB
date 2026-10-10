@@ -1,33 +1,42 @@
 :root {
-  /* Core brand colors */
-  --fluxi-orange: #ff7a1a;
-  --fluxi-orange-hover: #e86800;
-  --fluxi-blue: #2316b8;
-  --fluxi-blue-hover: #1a1194;
-  --fluxi-black: #1a1a1a;
+  --fluxi-orange: #f59e0b;
+  --fluxi-orange-hover: #d97706;
+  --fluxi-blue: #4f46e5;
+  --fluxi-blue-hover: #4338ca;
+  --fluxi-blue-light: #3b82f6;
+  --fluxi-black: #0f172a;
   --fluxi-white: #ffffff;
-  --fluxi-gray-50: #f6f8fb;
-  --fluxi-green-accent: #cdefd7;
+  --fluxi-gray-50: #f8fafc;
+  --fluxi-border: #e2e8f0;
+  --fluxi-muted: #475569;
+  --fluxi-edu: #8b5cf6;
+  --fluxi-edu-soft: #f5f3ff;
+  --fluxi-industrial: #0ea5e9;
+  --fluxi-industrial-soft: #f0f9ff;
+  --fluxi-sport: #10b981;
+  --fluxi-sport-soft: #ecfdf5;
+  --fluxi-labs: #f59e0b;
+  --fluxi-labs-soft: #fffbeb;
 
   /* Semantic states */
-  --success: #22c55e;
+  --success: #10b981;
   --warning: #f59e0b;
   --error: #ef4444;
   --info: #3b82f6;
 
   /* Layout and surface */
-  --radius-card: 14px;
-  --shadow-soft: 0 8px 24px rgba(35, 22, 184, 0.08);
+  --radius-card: 8px;
+  --shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.06);
 
   /* Typography */
-  --font-heading: "Poppins", "Segoe UI", sans-serif;
-  --font-body: "Inter", "Segoe UI", sans-serif;
+  --font-heading: "Manrope", sans-serif;
+  --font-body: "DM Sans", sans-serif;
 }
 
 body {
   margin: 0;
   color: var(--fluxi-black);
-  background: var(--fluxi-white);
+  background: var(--fluxi-gray-50);
   font-family: var(--font-body);
 }
 

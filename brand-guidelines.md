@@ -2,45 +2,52 @@
 
 ## Paleta principal
 
-| Uso | Color | HEX | RGB |
+| Rol | Tono | HEX | Uso |
 | --- | --- | --- | --- |
-| Color principal (logo) | Naranja FluxiON | #FF7A1A | 255, 122, 26 |
-| Color secundario | Azul FluxiON | #2316B8 | 35, 22, 184 |
-| Texto principal | Negro | #1A1A1A | 26, 26, 26 |
-| Fondo | Blanco | #FFFFFF | 255, 255, 255 |
-| Fondo secundario | Gris muy claro | #F6F8FB | 246, 248, 251 |
-| Acento | Verde claro | #CDEFD7 | 205, 239, 215 |
+| Fondo base | Soft Canvas | #F8FAFC | Lienzo principal |
+| Superficie | Pure Card White | #FFFFFF | Tarjetas y modales |
+| Bordes | Subtle Slate | #E2E8F0 | Divisores y marcos |
+| Texto principal | Deep Slate | #0F172A | Titulares y texto de máxima jerarquía |
+| Texto secundario | Muted Slate | #475569 | Descripciones y metadatos |
+| Primario | Electric Cobalt | #4F46E5 | CTA principal, enlaces y foco |
+| Primario claro | Blue | #3B82F6 | Estados informativos y destellos sutiles |
+
+## Acentos por ecosistema
+
+| Versión | Acento | Badge |
+| --- | --- | --- |
+| Fluxion Edu | #8B5CF6 | #F5F3FF |
+| Fluxion Industrial y Logistic | #0EA5E9 | #F0F9FF |
+| Fluxion Sport | #10B981 | #ECFDF5 |
+| Desarrollos a medida / Labs | #F59E0B | #FFFBEB |
 
 ## Botones
 
-- Primario: fondo #FF7A1A, texto #FFFFFF, hover #E86800.
-- Secundario: fondo #2316B8, texto #FFFFFF, hover #1A1194.
+- Primario: fondo #4F46E5, texto #FFFFFF, hover #4338CA.
+- Secundario: fondo #3B82F6, texto #FFFFFF.
 
 ## Estados
 
-- Exito: #22C55E
+- Exito: #10B981
 - Advertencia: #F59E0B
 - Error: #EF4444
 - Informacion: #3B82F6
 
 ## Tipografia
 
-- Titulos: Poppins
-- Cuerpo e interfaz: Inter
+- Títulos: Manrope
+- Cuerpo e interfaz: DM Sans
 
 ## Composicion visual
 
-- Distribucion recomendada de color:
-  - 70% blanco y grises claros
-  - 20% azul
-  - 10% naranja
-- Tarjetas: radio de 12 a 16 px y sombras suaves.
+- Distribución recomendada: 60% neutros claros, 30% estructura y texto slate, 10% acentos funcionales.
+- Tarjetas: radio de hasta 8 px, bordes sutiles y sombras suaves.
 - Iconografia: lineal y simple.
-- Uso del naranja: solo para CTA y elementos de alto foco.
+- Los acentos se reservan para CTA, badges de versión y destellos discretos.
 
 ## Implementacion web
 
-1. Cargar fuentes Poppins e Inter desde Google Fonts.
+1. Cargar Manrope y DM Sans desde Google Fonts.
 2. Importar `brand-tokens.css` al inicio de tu app.
 3. Construir componentes base (`.btn-primary`, `.btn-secondary`, `.card`) usando tokens.
 4. Evitar mezclar nuevos colores sin mapeo a variables.
