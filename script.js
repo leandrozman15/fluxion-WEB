@@ -86,55 +86,16 @@ const motionModule = reducedMotion
   : import('https://cdn.jsdelivr.net/npm/motion@12/+esm').catch(() => null);
 
 const heroVideo = document.querySelector('#hero-video');
-const heroVideoToggle = document.querySelector('#hero-video-toggle');
-const heroVideoToggleLabel = heroVideoToggle?.querySelector('.hero-video-toggle-label');
-const heroVideoToggleIcon = heroVideoToggle?.querySelector('[aria-hidden="true"]');
 
-if (heroVideo instanceof HTMLVideoElement && heroVideoToggle instanceof HTMLButtonElement) {
-  const updateHeroVideoToggle = () => {
-    const isPlaying = !heroVideo.paused;
-    const action = isPlaying ? 'Pausar' : 'Reproducir';
-    heroVideoToggle.setAttribute('aria-label', `${action} video de fondo`);
-    heroVideoToggle.title = `${action} video`;
-
-    if (heroVideoToggleLabel) {
-      heroVideoToggleLabel.textContent = `${action} video`;
-    }
-
-    if (heroVideoToggleIcon) {
-      heroVideoToggleIcon.textContent = isPlaying ? 'Ⅱ' : '▶';
-    }
-  };
-
-  heroVideo.addEventListener('canplay', () => {
-    heroVideoToggle.hidden = false;
-
-    heroVideo.play().catch(() => {});
-  });
-
+if (heroVideo instanceof HTMLVideoElement) {
   heroVideo.addEventListener('play', () => {
     heroVideo.closest('.hero-video')?.classList.add('is-playing');
-    updateHeroVideoToggle();
   });
 
   heroVideo.addEventListener('pause', () => {
     heroVideo.closest('.hero-video')?.classList.remove('is-playing');
-    updateHeroVideoToggle();
   });
 
-  heroVideo.addEventListener('error', () => {
-    heroVideoToggle.hidden = true;
-  });
-
-  heroVideoToggle.addEventListener('click', () => {
-    if (heroVideo.paused) {
-      heroVideo.play().catch(() => {});
-    } else {
-      heroVideo.pause();
-    }
-  });
-
-  updateHeroVideoToggle();
   heroVideo.play().catch(() => {});
 }
 
